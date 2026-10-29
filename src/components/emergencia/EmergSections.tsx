@@ -122,7 +122,11 @@ export function ModesDemo() {
             {tone && (
               <div
                 className="pointer-events-none absolute inset-0 mix-blend-color transition-colors duration-300"
-                style={{ backgroundColor: tone, opacity: mode === "blanco" ? 0.15 : 0.55 }}
+                style={{
+                  backgroundColor: tone,
+                  opacity: mode === "blanco" ? 0 : 0.85,
+                  maskImage: "radial-gradient(ellipse 30% 40% at 45% 47%, black 60%, transparent 100%)",
+                }}
               />
             )}
             {tone && (
@@ -172,8 +176,7 @@ export function ModesDemo() {
 const HOTSPOTS = [
   { x: 33, y: 33, t: "4 paneles LED", d: "Luz de alta potencia que alumbra un cuarto completo." },
   { x: 86, y: 44, t: "Soporte ajustable 180°", d: "Párala en la mesa o el piso y apunta la luz donde la necesitas." },
-  { x: 62, y: 62, t: "Carcasa antigolpes IP66", d: "Esquinas reforzadas que la protegen de caídas, lluvia y polvo." },
-  { x: 76, y: 17, t: "Salida USB · Powerbank", d: "Conecta tu celular y cárgalo aunque no haya luz." },
+  { x: 74, y: 70, t: "Carcasa antigolpes IP66", d: "Esquinas reforzadas que la protegen de caídas, lluvia y polvo." },
 ];
 
 export function EmergSpecs() {
