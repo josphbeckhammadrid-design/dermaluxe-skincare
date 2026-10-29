@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LamparaSolarRouteImport } from './routes/lampara-solar'
+import { Route as LuzEmergenciaRouteImport } from './routes/luz-emergencia'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const LamparaSolarRoute = LamparaSolarRouteImport.update({
   path: '/lampara-solar',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LuzEmergenciaRoute = LuzEmergenciaRouteImport.update({
+  id: '/luz-emergencia',
+  path: '/luz-emergencia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/lampara-solar': typeof LamparaSolarRoute
+  '/luz-emergencia': typeof LuzEmergenciaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/lampara-solar': typeof LamparaSolarRoute
+  '/luz-emergencia': typeof LuzEmergenciaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/lampara-solar': typeof LamparaSolarRoute
+  '/luz-emergencia': typeof LuzEmergenciaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/lampara-solar'
+  fullPaths: '/' | '/lampara-solar' | '/luz-emergencia'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/lampara-solar'
-  id: '__root__' | '/' | '/lampara-solar'
+  to: '/' | '/lampara-solar' | '/luz-emergencia'
+  id: '__root__' | '/' | '/lampara-solar' | '/luz-emergencia'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LamparaSolarRoute: typeof LamparaSolarRoute
+  LuzEmergenciaRoute: typeof LuzEmergenciaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LamparaSolarRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/luz-emergencia': {
+      id: '/luz-emergencia'
+      path: '/luz-emergencia'
+      fullPath: '/luz-emergencia'
+      preLoaderRoute: typeof LuzEmergenciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LamparaSolarRoute: LamparaSolarRoute,
+  LuzEmergenciaRoute: LuzEmergenciaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
