@@ -196,6 +196,63 @@
   font-family: var(--font-display);
 }
 
+/*
+ * Emergency light theme (scoped to the /luz-emergencia page).
+ * Warm graphite, safety-orange housing color and cool LED-white accents.
+ */
+.theme-emergencia {
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius: 0.5rem;
+  --background: oklch(0.19 0.008 60);
+  --foreground: oklch(0.96 0.006 80);
+  --card: oklch(0.235 0.01 60);
+  --card-foreground: oklch(0.96 0.006 80);
+  --popover: oklch(0.235 0.01 60);
+  --popover-foreground: oklch(0.96 0.006 80);
+  --primary: oklch(0.72 0.19 50);
+  --primary-foreground: oklch(0.16 0.01 60);
+  --secondary: oklch(0.27 0.012 60);
+  --secondary-foreground: oklch(0.94 0.006 80);
+  --muted: oklch(0.25 0.01 60);
+  --muted-foreground: oklch(0.72 0.015 70);
+  --accent: oklch(0.29 0.02 55);
+  --accent-foreground: oklch(0.96 0.006 80);
+  --destructive: oklch(0.62 0.21 25);
+  --destructive-foreground: oklch(0.98 0.005 80);
+  --border: oklch(0.33 0.012 60);
+  --input: oklch(0.36 0.012 60);
+  --ring: oklch(0.72 0.19 50);
+
+  --circuit: oklch(0.9 0.04 230);
+  --circuit-foreground: oklch(0.16 0.01 60);
+  --night: oklch(0.14 0.006 60);
+  --siren: oklch(0.62 0.2 260);
+
+  --gradient-night:
+    radial-gradient(ellipse 70% 45% at 70% 0%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--background) 0%, var(--night) 100%);
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--primary) 60%, transparent), 0 18px 50px -12px color-mix(in oklab, var(--primary) 55%, transparent);
+  --shadow-panel: 0 1px 0 0 color-mix(in oklab, var(--foreground) 6%, transparent) inset, 0 30px 60px -30px color-mix(in oklab, var(--night) 90%, transparent);
+
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.theme-emergencia .font-display,
+.theme-emergencia.font-display {
+  font-family: var(--font-display);
+}
+
+.theme-emergencia :is(h1, h2, h3) {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+}
+
 @layer base {
   .theme-solar :is(h1, h2, h3) {
     font-weight: 600;
