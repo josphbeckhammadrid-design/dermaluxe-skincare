@@ -121,7 +121,7 @@ export function ModesDemo() {
             />
             {tone && (
               <div
-                className="pointer-events-none absolute inset-0 mix-blend-multiply transition-colors duration-300"
+                className="pointer-events-none absolute inset-0 mix-blend-multiply transition-colors duration-150"
                 style={{
                   backgroundColor: tone,
                   opacity: mode === "blanco" ? 0 : 0.9,
