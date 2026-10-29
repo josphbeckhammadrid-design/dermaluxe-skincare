@@ -21,7 +21,7 @@ export function SolarAnnouncement() {
       <div className="flex w-max animate-marquee gap-8 py-2.5 sm:gap-12">
         {items.map(({ icon: Icon, t }, i) => (
           <span key={i} className="label-lab flex items-center gap-2 whitespace-nowrap text-xs font-semibold sm:text-[0.6875rem]">
-            <Icon className="size-3.5 text-primary" /> {t}
+            <Icon className="size-3.5 shrink-0" /> {t}
           </span>
         ))}
       </div>

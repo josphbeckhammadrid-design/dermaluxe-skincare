@@ -44,7 +44,7 @@ export function TechTicker() {
       <div className="flex w-max animate-marquee gap-6 sm:gap-10">
         {all.map((t, i) => (
           <span key={i} className="flex items-center gap-6 whitespace-nowrap font-display text-lg font-semibold leading-none sm:gap-10 sm:text-2xl">
-            {t} <Zap className="size-4 shrink-0 fill-primary text-primary sm:size-5" />
+            {t} <Zap className="size-4 shrink-0 fill-current sm:size-5" />
           </span>
         ))}
       </div>
