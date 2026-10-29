@@ -143,10 +143,10 @@ export function SolarBuyBox() {
             </div>
           </div>
 
-          <Button variant="glow" size="xl" className="mt-5 w-full" onClick={() => add(selected)}>
-            Agregar al carrito · {formatMXN(selected.price)}
+          <Button variant="glow" size="xl" className="mt-5 h-auto w-full flex-col gap-0.5 py-3" onClick={() => add(selected)}>
+            <span>Compra ahora, paga al recibir</span>
+            <span className="text-sm font-medium opacity-80">{formatMXN(selected.price)} · Pago contra entrega</span>
           </Button>
-          <p className="mt-2 text-center text-sm text-muted-foreground">Compra ahora, paga cuando recibas</p>
 
           <div className="mt-5 grid grid-cols-3 gap-2 text-center text-xs">
             {[
