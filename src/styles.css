@@ -230,6 +230,9 @@
   --circuit-foreground: oklch(0.16 0.01 60);
   --night: oklch(0.14 0.006 60);
   --siren: oklch(0.62 0.2 260);
+  --mode-white: oklch(0.95 0.03 235);
+  --mode-neutral: oklch(0.96 0.03 95);
+  --mode-warm: oklch(0.82 0.13 65);
 
   --gradient-night:
     radial-gradient(ellipse 70% 45% at 70% 0%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 70%),
