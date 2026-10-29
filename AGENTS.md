@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Product page lives at `/` and is composed from `src/components/product/*`; bundle prices and copy data live in `src/lib/product.ts` so pricing has one source of truth (covered by `src/test/product-pricing.test.ts`).
+- Cart is client-only React context (`cart.tsx`); checkout is not connected to a backend yet.
