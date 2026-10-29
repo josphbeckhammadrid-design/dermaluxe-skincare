@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { Button } from "@/components/ui/button";
 import { useCart } from "./cart";
 import { formatMXN, bundleSavings } from "@/lib/product";
-import productHero from "@/assets/product-hero.jpg";
+import productHero from "@/assets/kormesic-hero.jpg";
 
 const ANNOUNCE = [
   { icon: Truck, t: "Envío express gratis desde 2 frascos" },
@@ -34,7 +34,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5">
         <a href="#top" className="flex items-baseline gap-2">
-          <span className="font-display text-2xl tracking-[0.2em] text-ink">DERMAFORM</span>
+          <span className="font-display text-2xl tracking-[0.2em] text-ink">KORMESIC</span>
           <span className="label-lab hidden text-muted-foreground sm:inline">Clinical Skincare</span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
@@ -66,7 +66,7 @@ export function SiteHeader() {
           {item ? (
             <div className="flex flex-1 flex-col gap-6 px-4">
               <div className="flex gap-4 rounded-xl border bg-card p-3">
-                <img src={productHero} alt="Pads DERMAFORM" className="size-20 rounded-lg object-cover" />
+                <img src={productHero} alt="KORMESIC Acid peel pads" className="size-20 rounded-lg object-cover" />
                 <div className="flex-1">
                   <p className="font-medium">Pads Exfoliantes BHA 2% · AHA 30%</p>
                   <p className="text-sm text-muted-foreground">{item.label} · {item.note}</p>

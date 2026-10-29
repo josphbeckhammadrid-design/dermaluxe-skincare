@@ -27,7 +27,7 @@ export function pricePerPad(b: Pick<Bundle, "price" | "qty">, padsPerJar = PADS_
   return Math.round((b.price / (b.qty * padsPerJar)) * 100) / 100;
 }
 
-export const PADS_PER_JAR = 60;
+export const PADS_PER_JAR = 50;
 
 export function formatMXN(n: number) {
   return `$${n.toLocaleString("es-MX")}`;
