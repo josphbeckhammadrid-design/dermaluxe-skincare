@@ -345,3 +345,12 @@
     mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
   }
 }
+@utility bg-hazard {
+  background-image: repeating-linear-gradient(-45deg, var(--primary) 0 14px, var(--night) 14px 28px);
+}
+@utility text-siren {
+  color: var(--siren);
+}
+@utility bg-siren {
+  background-color: var(--siren);
+}
