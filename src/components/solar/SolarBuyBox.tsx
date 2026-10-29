@@ -147,6 +147,21 @@ export function SolarBuyBox() {
             <span>Compra ahora, paga al recibir</span>
             <span className="text-sm font-medium opacity-80">{formatMXN(selected.price)} · Pago contra entrega</span>
           </Button>
+          <ol className="mt-3 grid gap-2 rounded-lg border border-border/60 bg-card/40 p-3 text-sm">
+            {[
+              ["Confirma tu pedido", "Te llamamos o escribimos por WhatsApp para confirmar tus datos."],
+              ["Recibe en 1–3 días", "Te la llevamos hasta la puerta de tu casa."],
+              ["Paga al recibir", "Pagas en efectivo hasta que tienes la lámpara en tus manos."],
+            ].map(([t, d], i) => (
+              <li key={t} className="flex gap-3">
+                <span className="grid size-6 shrink-0 place-items-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{i + 1}</span>
+                <span className="min-w-0">
+                  <span className="font-semibold text-foreground">{t}.</span>{" "}
+                  <span className="text-muted-foreground">{d}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
 
           <div className="mt-5 grid grid-cols-3 gap-2 text-center text-xs">
             {[
