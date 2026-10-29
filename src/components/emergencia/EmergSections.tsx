@@ -121,11 +121,11 @@ export function ModesDemo() {
             />
             {tone && (
               <div
-                className="pointer-events-none absolute inset-0 mix-blend-color transition-colors duration-300"
+                className="pointer-events-none absolute inset-0 mix-blend-multiply transition-colors duration-300"
                 style={{
                   backgroundColor: tone,
-                  opacity: mode === "blanco" ? 0 : 0.85,
-                  maskImage: "radial-gradient(ellipse 30% 40% at 45% 47%, black 60%, transparent 100%)",
+                  opacity: mode === "blanco" ? 0 : 0.9,
+                  maskImage: "radial-gradient(ellipse 34% 46% at 45% 42%, black 75%, transparent 100%)",
                 }}
               />
             )}
