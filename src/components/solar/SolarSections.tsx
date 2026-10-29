@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useSolarCart } from "./cart";
 import { formatMXN } from "@/lib/product";
-import { SOLAR_SPECS, SOLAR_REVIEWS, SOLAR_FAQS } from "@/lib/solar";
+import { SOLAR_SPECS, SOLAR_REVIEWS, SOLAR_FAQS, SOLAR_BUNDLES } from "@/lib/solar";
 import heroImg from "@/assets/solar-hero.jpg";
 import nightImg from "@/assets/solar-night.jpg";
 import sunImg from "@/assets/solar-sun.jpg";
@@ -522,7 +522,8 @@ export function FinalCta() {
           <p className="label-lab text-primary">Precio especial de lanzamiento</p>
           <h2 className="mt-4 text-4xl leading-[1.05] sm:text-5xl">Ilumina tu casa sin pagar luz.</h2>
           <p className="mt-4 text-muted-foreground">
-            1 pieza {formatMXN(699)} · 5 piezas {formatMXN(1599)}. Envío gratis y pago contra entrega.
+            {SOLAR_BUNDLES[0]!.label} {formatMXN(SOLAR_BUNDLES[0]!.price)} · {SOLAR_BUNDLES[SOLAR_BUNDLES.length - 1]!.label}{" "}
+            {formatMXN(SOLAR_BUNDLES[SOLAR_BUNDLES.length - 1]!.price)}. Envío gratis y pago contra entrega.
           </p>
           <Button variant="glow" size="xl" className="mt-8" onClick={() => add(selected)}>
             Compra ahora, paga al recibir

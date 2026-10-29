@@ -165,7 +165,7 @@ export function SolarBuyBox() {
           <div className="mt-6 rounded-lg border border-dashed border-circuit/40 bg-card p-5">
             <p className="label-lab text-circuit">En la caja</p>
             <ul className="mt-3 grid grid-cols-2 gap-2 text-sm">
-              {["Lámpara solar 9 COB", "Control remoto", "Soporte orientable", "Tornillos y taquetes"].map((t) => (
+              {["Lámpara solar 9 COB", "Control remoto", "Soporte orientable", "Tornillos de montaje"].map((t) => (
                 <li key={t} className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-primary" /> {t}
                 </li>
