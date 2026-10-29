@@ -17,11 +17,11 @@ const ANNOUNCE = [
 export function SolarAnnouncement() {
   const items = [...ANNOUNCE, ...ANNOUNCE];
   return (
-    <div className="overflow-hidden bg-primary text-primary-foreground">
-      <div className="flex w-max animate-marquee gap-12 py-2.5">
+    <div className="overflow-hidden bg-smoke text-foreground">
+      <div className="fade-edges flex w-max animate-marquee gap-12 py-2.5">
         {items.map(({ icon: Icon, t }, i) => (
           <span key={i} className="label-lab flex items-center gap-2 whitespace-nowrap font-semibold">
-            <Icon className="size-3.5" /> {t}
+            <Icon className="size-3.5 text-primary" /> {t}
           </span>
         ))}
       </div>
