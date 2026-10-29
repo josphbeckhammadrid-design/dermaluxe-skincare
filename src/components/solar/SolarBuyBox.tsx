@@ -169,10 +169,10 @@ export function SolarBuyBox() {
               { i: Banknote, t: "Pago contra entrega", s: "Pagas al recibir" },
               { i: MessageCircle, t: "Atención por WhatsApp", s: "Confirmamos tu pedido" },
             ].map(({ i: I, t, s }) => (
-              <div key={t} className="flex flex-col items-center gap-1 rounded-md border bg-card px-2 py-3">
-                <I className="size-4 text-primary" />
+              <div key={t} className={`flex flex-col items-center gap-1 rounded-md border px-2 py-3 ${I === MessageCircle ? "border-primary bg-primary text-primary-foreground" : "bg-card"}`}>
+                <I className={`size-4 ${I === MessageCircle ? "" : "text-primary"}`} />
                 <span className="font-medium">{t}</span>
-                <span className="text-muted-foreground">{s}</span>
+                <span className={I === MessageCircle ? "opacity-80" : "text-muted-foreground"}>{s}</span>
               </div>
             ))}
           </div>
