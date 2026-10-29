@@ -1,24 +1,61 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { CartProvider } from "@/components/product/cart";
+import { AnnouncementBar, SiteHeader } from "@/components/product/SiteHeader";
+import { BuyBox } from "@/components/product/BuyBox";
+import {
+  IngredientTicker,
+  Problem,
+  Formula,
+  HowTo,
+  Results,
+  Compare,
+  Reviews,
+  Faq,
+  FinalCta,
+  SiteFooter,
+  StickyBar,
+} from "@/components/product/Sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "KORMESIC Acid Peel Pads · Ácido Salicílico 2% + Glicólico 30%" },
+      {
+        name: "description",
+        content:
+          "Pads exfoliantes coreanos para poros limpios, menos grasa y piel luminosa. Pago contra entrega y envío a todo México.",
+      },
+      { property: "og:title", content: "KORMESIC Acid Peel Pads · Piel limpia y luminosa" },
+      {
+        property: "og:description",
+        content: "Exfoliación química coreana en un pad: BHA 2% + AHA 30%. Paga al recibir, garantía de 60 días.",
+      },
+      { property: "og:type", content: "product" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <CartProvider>
+      <AnnouncementBar />
+      <SiteHeader />
+      <main className="pb-20 lg:pb-0">
+        <BuyBox />
+        <IngredientTicker />
+        <Problem />
+        <Formula />
+        <HowTo />
+        <Results />
+        <Compare />
+        <Reviews />
+        <Faq />
+        <FinalCta />
+      </main>
+      <SiteFooter />
+      <StickyBar />
+    </CartProvider>
   );
 }
