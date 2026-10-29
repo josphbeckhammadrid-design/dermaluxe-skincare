@@ -6,3 +6,4 @@
 - [x] Archivo de instrucciones + sección Shopify para pegar en Claude (en Files: shopify-kormesic/)
 - [x] Página de lámpara solar LED 9 COB estilo iluminación/tecnología en /lampara-solar
 - [ ] Confirmar precios, nombre de tienda y opiniones reales de la lámpara (espera respuesta del usuario)
+- [x] Franjas de texto en movimiento legibles en celular (lámpara solar)

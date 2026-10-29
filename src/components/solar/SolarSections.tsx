@@ -40,11 +40,11 @@ export function TechTicker() {
   const items = ["9 LED COB", "Carga solar", "Sensor PIR 120°", "IP66", "Control remoto", "Sin cables", "Cero recibo de luz"];
   const all = [...items, ...items, ...items];
   return (
-    <div className="overflow-hidden bg-foreground py-4 text-background">
-      <div className="flex w-max animate-marquee gap-10">
+    <div className="fade-edges overflow-hidden bg-smoke py-3 text-foreground sm:py-4">
+      <div className="flex w-max animate-marquee gap-6 sm:gap-10">
         {all.map((t, i) => (
-          <span key={i} className="flex items-center gap-10 whitespace-nowrap font-display text-2xl font-semibold">
-            {t} <Zap className="size-5 fill-primary text-primary" />
+          <span key={i} className="flex items-center gap-6 whitespace-nowrap font-display text-lg font-semibold leading-none sm:gap-10 sm:text-2xl">
+            {t} <Zap className="size-4 shrink-0 fill-primary text-primary sm:size-5" />
           </span>
         ))}
       </div>
