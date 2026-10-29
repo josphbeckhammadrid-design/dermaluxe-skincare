@@ -17,7 +17,7 @@ const ANNOUNCE = [
 export function SolarAnnouncement() {
   const items = [...ANNOUNCE, ...ANNOUNCE];
   return (
-    <div className="fade-edges overflow-hidden bg-smoke text-foreground">
+    <div className="overflow-hidden bg-primary text-primary-foreground">
       <div className="flex w-max animate-marquee gap-8 py-2.5 sm:gap-12">
         {items.map(({ icon: Icon, t }, i) => (
           <span key={i} className="label-lab flex items-center gap-2 whitespace-nowrap text-xs font-semibold sm:text-[0.6875rem]">
