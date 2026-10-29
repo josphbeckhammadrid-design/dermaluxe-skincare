@@ -21,6 +21,8 @@ const buttonVariants = cva(
         serum:
           "bg-serum text-serum-foreground shadow-soft hover:brightness-95 transition-all hover:-translate-y-px font-semibold tracking-wide",
         lab: "border border-primary/25 bg-card text-primary hover:bg-mint hover:border-primary/40",
+        glow: "bg-primary text-primary-foreground shadow-glow font-semibold uppercase tracking-wider transition-all hover:-translate-y-px hover:brightness-110",
+        tech: "border border-circuit/40 bg-transparent text-circuit font-medium hover:bg-circuit/10 hover:border-circuit/70",
       },
       size: {
         default: "h-9 px-4 py-2",
