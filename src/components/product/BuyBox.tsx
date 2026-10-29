@@ -35,15 +35,15 @@ export function BuyBox() {
         <div className="lg:sticky lg:top-24 lg:self-start">
           <div className="relative overflow-hidden rounded-2xl border bg-card shadow-clinical">
             <img
-              src={GALLERY[active].src}
-              alt={GALLERY[active].alt}
+              src={GALLERY[active]!.src}
+              alt={GALLERY[active]!.alt}
               width={1280}
               height={1280}
               className="aspect-square w-full object-cover"
             />
             <div className="absolute left-4 top-4 flex flex-col gap-2">
               <span className="label-lab rounded-full bg-card/90 px-3 py-1.5 text-primary backdrop-blur">Fórmula clínica</span>
-              <span className="label-lab rounded-full bg-serum px-3 py-1.5 text-serum-foreground">−{bundleDiscountPercent(BUNDLES[0])}% lanzamiento</span>
+              <span className="label-lab rounded-full bg-serum px-3 py-1.5 text-serum-foreground">−{bundleDiscountPercent(BUNDLES[0]!)}% lanzamiento</span>
             </div>
             <div className="absolute bottom-4 right-4 rounded-xl border bg-card/90 p-3 text-right backdrop-blur">
               <p className="label-lab text-muted-foreground">Ref. KRM-50</p>
