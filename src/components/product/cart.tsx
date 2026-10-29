@@ -16,7 +16,7 @@ const Ctx = createContext<CartCtx | null>(null);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [item, setItem] = useState<Bundle | null>(null);
   const [open, setOpen] = useState(false);
-  const [selected, select] = useState<Bundle>(BUNDLES[1]);
+  const [selected, select] = useState<Bundle>(BUNDLES[1]!);
   return (
     <Ctx.Provider
       value={{
